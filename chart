@@ -1,0 +1,17 @@
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# فرض کنید که داده‌های استخراج‌شده در df قرار دارند
+# df = pd.read_sql_query(your_sql_query, your_connection)
+
+# ترسیم نمودار
+plt.figure(figsize=(10, 6))
+plt.plot(df['OrderDate'], df['TotalOrders'], marker='o')
+plt.title('تعداد سفارش‌های روزانه')
+plt.xlabel('تاریخ')
+plt.ylabel('تعداد سفارشات')
+plt.xticks(rotation=45)
+plt.grid()
+plt.tight_layout()
+plt.show()
